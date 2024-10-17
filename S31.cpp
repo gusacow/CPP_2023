@@ -14,4 +14,5 @@ int main(){
         cout << "Ошибка";
     else
         cout << numbers[a];
+    return 0;
 }
