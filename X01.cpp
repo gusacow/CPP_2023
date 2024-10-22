@@ -11,20 +11,16 @@ bool check(string chess){
 }
 
 bool queen_hit(string a, string b){
-    if(!check(a) || !check(b)){
-        cout << "Error";
-        return false;
-    }
     char a_sb = a[0];
     char a_rd = a[1];
     char b_sb = b[0];
     char b_rd = b[1];
-    if(a_sb == b_sb) //проверка столбца
+    if(!check(a) || !check(b)){
+        cout << "Error";
+        return false;
+    }
+    if(a_sb == b_sb || a_rd == b_rd || abs(a_sb - b_sb) == abs(a_rd - b_rd))//проверка столбца и проверка ряда и диагонали
         return true; 
-    if(a_rd == b_rd) //проверка ряда
-        return true;
-    if(abs((a_sb - 'a' + 1) - (b_sb - 'a' + 1)) == abs((a_rd - '0') - (a_rd - '0'))); //проверка диагонали
-        return true;
     return 0;
 }
 
