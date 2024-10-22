@@ -3,10 +3,10 @@
 using namespace std;
 
 bool check(string chess){
-    if(chess.size() != 2)
-        return false;
     char sb = chess[0]; //sb-столбец
     char rd = chess[1]; //rd-ряд
+    if(chess.size() != 2)
+        return false;
     return (sb >= 'a' & sb <= 'h') & (rd >= '1' & rd <= '8');
 }
 
